@@ -28,5 +28,5 @@ jobs:
             pip install imbalanced-learn
             pip install lightgbm
   
-        - name: Run tests_unitaires
+        - name: Run tests
           run: pytest
