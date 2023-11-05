@@ -1,4 +1,4 @@
-name: pipeline_tests
+name: test_workflow
 
 on: push
 
@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest]
-        python-version: [3.11.3]
+        python-version: [3.11.5]
 
     name: UnitaryTests
     runs-on: ${{ matrix.os }}
@@ -26,10 +26,10 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install pytest
+          pip install requests
           pip install pandas
           pip install numpy
           pip install imbalanced-learn
           pip install lightgbm
-
       - name: Run tests
         run: pytest
