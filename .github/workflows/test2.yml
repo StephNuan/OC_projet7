@@ -6,7 +6,7 @@ jobs:
   jobs1:
     runs-on: ubuntu-latest
       
-    name: UnitaryTests2
+    name: UnitaryTests
 
   
     steps:
@@ -28,5 +28,5 @@ jobs:
             pip install imbalanced-learn
             pip install lightgbm
   
-        - name: Run tests
+        - name: Run tests_unitaires.py
           run: pytest
