@@ -31,6 +31,5 @@ jobs:
           pip install numpy
           pip install imbalanced-learn
           pip install lightgbm
-
-      - name: Exécute le workflow partagé
-        uses: owhttps://github.com/StephNuan/Projet_7/blob/93e0f02025c9013d780e9a60299fba99631ed6d8/.github/workflows/main.yml
+      - name: Run tests
+        run: pytest
